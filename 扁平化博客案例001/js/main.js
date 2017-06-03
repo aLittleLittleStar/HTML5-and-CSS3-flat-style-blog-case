@@ -20,26 +20,21 @@ $(function(){
 		sidebar.css('right',-sidebar.width());
 	}
 	
-	sidebar_trigger.on('click',showSidebar)
-	mask.on('click',hideSidebar)
+	sidebar_trigger.on('click',showSidebar);
+	mask.on('click',hideSidebar);
 	
-	<!---返回顶部的函数-->
+	// 返回顶部的函数
 	backTop.on('click',function(){
 		$('html,body').animate({
 			scrollTop:0
-		},800)
-	})
+		},800);
+	});
 	$(window).on('scroll',function(){
 		if($(window).scrollTop() > $(window).height())
 		backTop.fadeIn();
 		else
 		backTop.fadeOut();
-	})
-
-
-
-
-
-})
+	});
+});
 
 
